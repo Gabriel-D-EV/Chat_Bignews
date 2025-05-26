@@ -60,16 +60,6 @@ const processMessage = ({ data }) => {
 const handleLogin = (event) => {
     event.preventDefault()
 
-    const nomeDigitado = loginInput.value.trim()
-
-    const nomesAutorizados = ["Narut0", "Hinat4"]
-
-
-    if (!nomesAutorizados.includes(nomeDigitado)) {
-        alert("Acesso negado! Você não tem permissão pra entrar. 🚫")
-        return
-    }
-
     user.id = crypto.randomUUID()
     user.name = loginInput.value
 
